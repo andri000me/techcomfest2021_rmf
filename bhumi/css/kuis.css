@@ -1,0 +1,293 @@
+#slider {
+    margin: 0 auto;
+    width: 800px;
+    max-width: 100%;
+    text-align: center;
+}
+
+#slider input[type=radio] {
+    display: none;
+}
+
+#slider label {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#slides {
+    padding: 10px;
+    border: 1px solid rgb(21, 156, 194);
+    background: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+#overflow {
+    width: 100%;
+    overflow: hidden;
+}
+
+#slide1:checked~#slides .inner {
+    margin-left: 0;
+}
+
+#slide2:checked~#slides .inner {
+    margin-left: -100%;
+}
+
+#slide3:checked~#slides .inner {
+    margin-left: -200%;
+}
+
+#slide4:checked~#slides .inner {
+    margin-left: -300%;
+}
+
+#slides .inner {
+    transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    width: 400%;
+    line-height: 0;
+    height: 300px;
+}
+
+#slides .slide {
+    width: 25%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+}
+
+#slides .slide_1 {
+    background: #dbebf0;
+}
+
+#slides .slide_2 {
+    background: #dbebf0;
+}
+
+#slides .slide_3 {
+    background: #dbebf0;
+}
+
+#slides .slide_4 {
+    background: #dbebf0;
+}
+
+#controls {
+    margin: -180px 0 0 0;
+    width: 100%;
+    height: 50px;
+    z-index: 3;
+    position: relative;
+}
+
+#controls label {
+    transition: opacity 0.2s ease-out;
+    display: none;
+    width: 50px;
+    height: 50px;
+    opacity: .4;
+}
+
+#controls label:hover {
+    opacity: 1;
+}
+
+#slide1:checked~#controls label:nth-child(2),
+#slide2:checked~#controls label:nth-child(3),
+#slide3:checked~#controls label:nth-child(4),
+#slide4:checked~#controls label:nth-child(1) {
+    background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
+    float: right;
+    margin: 0 -50px 0 0;
+    display: block;
+}
+
+#slide1:checked~#controls label:nth-last-child(2),
+#slide2:checked~#controls label:nth-last-child(3),
+#slide3:checked~#controls label:nth-last-child(4),
+#slide4:checked~#controls label:nth-last-child(1) {
+    background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
+    float: left;
+    margin: 0 0 0 -50px;
+    display: block;
+}
+
+#bullets {
+    margin: 150px 0 0;
+    text-align: center;
+}
+
+#bullets label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background: #ccc;
+    margin: 0 10px;
+}
+
+#slide1:checked~#bullets label:nth-child(1),
+#slide2:checked~#bullets label:nth-child(2),
+#slide3:checked~#bullets label:nth-child(3),
+#slide4:checked~#bullets label:nth-child(4) {
+    background: #444;
+}
+
+@media screen and (max-width: 900px) {
+
+    #slide1:checked~#controls label:nth-child(2),
+    #slide2:checked~#controls label:nth-child(3),
+    #slide3:checked~#controls label:nth-child(4),
+    #slide4:checked~#controls label:nth-child(1),
+    #slide1:checked~#controls label:nth-last-child(2),
+    #slide2:checked~#controls label:nth-last-child(3),
+    #slide3:checked~#controls label:nth-last-child(4),
+    #slide4:checked~#controls label:nth-last-child(1) {
+        margin: 0;
+    }
+
+    #slides {
+        max-width: calc(100% - 140px);
+        margin: 0 auto;
+    }
+}
+
+/* kuis hover */
+.flip-card-container {
+    width: 800px;
+    height: 300px;
+    perspective: 1000px;
+    margin-left: 25px;
+    padding-right: 25px;
+}
+
+@media (max-width: 500px) {
+    .flip-card-container {
+        width: 500px;
+        height: 300px;
+        padding-left: 80px;
+        padding-right: 130px;
+        margin-right: -20px;
+    }
+}
+
+.flip-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1700ms;
+    transform-style: preserve-3d;
+}
+
+.flip-card-container:hover .flip-card {
+    transform: rotateY(900deg);
+    /* <=>  rotateY(.5turn) */
+}
+
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 0.5rem; */
+}
+
+.flip-card-front {
+    color: #fff;
+}
+
+.flip-card-back {
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+.front-1 {
+    background-color: #ef233c;
+
+}
+
+.back-1 {
+    background-color: #a5be00;
+}
+
+.front-2 {
+    background-color: #ff9505;
+
+}
+
+.back-2 {
+    background-color: #00a6fb;
+}
+
+.front-3 {
+    background-color: #724cf9;
+
+}
+
+.back-3 {
+    background-color: #8ea604;
+}
+
+.front-4 {
+    background-color: #1e96fc;
+
+}
+
+.back-4 {
+    background-color: #ff8c42;
+}
+
+
+
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    /* border-radius: 0.5rem; */
+}
+
+.flip-card-back p {
+    text-align: center;
+    margin: 1rem;
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+}
+
+.flip-card-back p span {
+    display: block;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 1.25rem;
+}
+
+.flip-card-front h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 22px;
+    margin-bottom: -15px;
+
+}
+
+.flip-card-front p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 13px;
+}
+
+.kuis-note {
+    text-align: center;
+    margin-top: -60px;
+    margin-bottom: 70px;
+}

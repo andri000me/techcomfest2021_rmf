@@ -1,0 +1,106 @@
+﻿.kamus {
+    margin-bottom: 100px;
+}
+
+.textarea {
+    border-radius: 3px;
+    /* padding: 42px 10px 2px 10px; */
+    height: 100px;
+    width: 100%;
+}
+
+.result {
+    border: 2px solid rgb(186, 184, 184);
+    border-radius: 3px;
+    padding: 2px 10px 2px 10px;
+    height: 100px;
+    width: 100%;
+
+
+}
+
+.title-kamus p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.title-kamus h1 {
+    font-size: 38px;
+}
+
+.bahasa1 {
+    margin-bottom: 5px;
+}
+
+.bahasa2 {
+    margin-bottom: 5px;
+}
+
+.bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+    width:
+        /*215px*/
+        auto !important
+}
+
+#sourceText:focus {
+    border-color: #fff;
+}
+
+/*#result{margin-left:-15px}*/
+#shView .ref_result:hover {
+    color: #333;
+    text-decoration: none;
+    cursor: default;
+}
+
+/*#translations ol li:hover {background-color: #fff;}*/
+#SamplesBlock h3 {
+    padding-top: 19px;
+}
+
+#PhrasesBlock h3 span,
+#SamplesBlock h3 span,
+#topExplanatoryBlock h3 span,
+#ExplanatoryBlock h3 span {
+    /*background-color:#fff;*/
+    padding: 8px;
+    margin-left: 0px;
+}
+
+.setLang div:first-child div:last-child {
+    float: right;
+    margin-right: 10px;
+}
+
+#bTranslation {
+    float: right
+}
+
+.setLang div:nth-child(3) div:first-child {
+    margin-left: -5px;
+}
+
+#trResult {
+    overflow: hidden;
+}
+
+.cforms_result:nth-last-child(3) {
+    border-bottom: none;
+    margin-bottom: 4px;
+}
+
+#topPhrasesBlock,
+#topSamplesBlock,
+#topExplanatoryBlock {
+    background-color: #fff;
+}
+
+
+#topPhrasesBlock,
+#topSamplesBlock {
+    display: none;
+}
+
+.translations .copy-btn {
+    margin-left: 20px
+}

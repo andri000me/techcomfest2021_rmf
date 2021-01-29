@@ -1,0 +1,58 @@
+.tabContainer {
+    width: 100%;
+    height: 260px;
+}
+
+.tabContainer .right-pick {
+    height: 15%;
+    width: 50%;
+    margin-left: auto;
+    padding-left: 15px;
+}
+
+.tabContainer .right-pick button {
+    width: 20%;
+    height: 100%;
+    float: left;
+    border: none;
+    border-radius: 5%;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: 14px;
+    background-color: #eee;
+}
+
+.tabContainer .left-pick button {
+    margin-right: auto;
+    width: 10%;
+    height: 100%;
+    float: left;
+    border: none;
+    border-radius: 5%;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: white;
+    background-color: #067bf9;
+
+}
+
+
+.tabContainer .right-pick button:hover {
+    background-color: #d7d4d4;
+}
+
+.tabContainer .tabPanel {
+    height: 85%;
+    background-color: white;
+    color: black;
+    padding-top: 5px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 22px;
+    display: none;
+}
